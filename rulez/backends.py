@@ -21,7 +21,7 @@ class ObjectPermissionBackend(object):
         If it exists returns the value of obj.field_name or obj.field_name() in case
         the field is a method.
         """
-        if user_obj and not user_obj.is_anonymous() and not user_obj.is_active:
+        if user_obj and not user_obj.is_anonymous and not user_obj.is_active:
             # inactive users never have permissions
             return False
 
