@@ -62,7 +62,7 @@ def roles_key(user, obj):
 
 
 def get_user_pk(user):
-    if not user or (user and user.is_anonymous()):
+    if not user or (user and user.is_anonymous):
         return 'anonymous'
     else:
         return user.pk
