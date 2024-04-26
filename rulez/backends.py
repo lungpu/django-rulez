@@ -50,7 +50,7 @@ class ObjectPermissionBackend(object):
 
         # Otherwise it is a callabe bound_field
         # Let's see if we pass or not user_obj as a parameter
-        if (len(inspect.getargspec(bound_field)[0]) == 2):
+        if (len(inspect.getfullargspec(bound_field)[0]) == 2):
             is_authorized = bound_field(user_obj)
         else:
             is_authorized = bound_field()

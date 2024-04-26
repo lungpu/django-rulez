@@ -19,3 +19,4 @@ rulez/tests/htmlcov/
 django_rulez.egg-info/
 .coverage
 *htmlcov*
+.projectile
