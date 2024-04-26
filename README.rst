@@ -39,6 +39,10 @@ interesting use-case we haven't thought of :)
 Our test coverage is 100%, and we would like to keep it this way, so
 please make sure you test before you push.
 
+I have forked this repo from https://github.com/TwigWorld/django-rulez which in turn is a fork of the original.
+The reason behind is that even when there are some issues fixed in his version, there are still some things that are outdated.
+The idea is to address those here.
+
 Installation
 =============
 
@@ -50,7 +54,7 @@ To install django-rulez from source:
 
 .. code-block:: shell
 
-	git clone https://github.com/chrisglass/django-rulez/ django-rulez
+	git clone https://github.com/lungpu/django-rulez.git
 	cd django-rulez
 	python setup.py install
 
@@ -61,7 +65,7 @@ Simply install django-rulez like you would install any other pypi package:
 
 .. code-block:: shell
 
-    pip install django-rulez
+    pip install django-rulez @ git+https://github.com/lungpu/django-rulez@master (this should work, at least it works inside requirements.txt)
 
 
 Configuration
@@ -133,7 +137,7 @@ A little more code is needed to use roles, but it's still pretty concise:
 
     # models.py
     from rulez.rolez.base import AbstractRole
-    from rulez.roles.models import ModelRoleMixin
+    from rulez.rolez.models import ModelRoleMixin
     from rulez import registry
 
     class Editor(AbstractRole):
